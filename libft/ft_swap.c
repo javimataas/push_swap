@@ -6,13 +6,14 @@
 /*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 19:05:56 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/18 19:06:54 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:46:38 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
 	int	tmp;
+
 	tmp = *a;
 	*a = *b;
 	*b = tmp;

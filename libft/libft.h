@@ -6,7 +6,7 @@
 /*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:56:20 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/25 17:23:28 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/04/27 19:07:17 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ char			*get_next_line(int fd);
 int				ft_abs(int n);
 long int		ft_atol(const char *str);
 void			ft_free_str_array(char **array);
+void			ft_swap(int *a, int *b);
 
 #endif

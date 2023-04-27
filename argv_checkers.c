@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argv_checkers.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jmatas-p <jmatas-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:52:40 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/25 17:18:58 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:23:35 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_same_args(char *s1, char *s2)
 		s1++;
 	while (*s2 == '+' || *s2 == '0')
 		s2++;
-	return (ft_strcmp(s1, s2);
+	return (ft_strcmp(s1, s2));
 }
 
 int	ft_is_number(char *s)
@@ -49,7 +49,7 @@ int	ft_args_dup(char **argv, int is_formatted)
 	{
 		j = is_formatted;
 		if (ft_atol(argv[i]) == 0)
-			zeros+;
+			zeros++;
 		while (argv[j])
 		{
 			if ((j != i && !ft_same_args(argv[i], argv[j])) || zeros > 1)

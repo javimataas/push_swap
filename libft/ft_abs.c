@@ -6,13 +6,13 @@
 /*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 19:38:50 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/18 19:39:26 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:48:11 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_abs(int n)
 {
 	if (n < 0)
-		return (n*-1);
+		return (n * -1);
 	return (n);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argv_formatters.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jmatas-p <jmatas-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:29:40 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/25 17:34:00 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:23:23 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	**ft_format(char **argv)
 
 	if (!argv[1] || ft_strcmp(argv[1], "") == 0)
 	{
-		ft_printf("InvalidArgumentsException: list of numbers received in a wrong format\n");
+		ft_printf("Exception: list of numbers received in a wrong format\n");
 		exit(1);
 	}
 	strs = ft_split(argv[1], ' ');
