@@ -6,7 +6,7 @@
 /*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:18:15 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/27 18:33:34 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/03 17:08:15 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_set_cost(t_stack **stack_a, t_stack **stack_b)
 
 void	ft_set_cheapest(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack	aux;
+	t_stack	*aux;
 	int		cheapest;
 	int		cost_a;
 	int		cost_b;

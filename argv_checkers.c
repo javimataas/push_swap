@@ -6,7 +6,7 @@
 /*   By: jmatas-p <jmatas-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:52:40 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/27 16:23:35 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:10:07 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ int	ft_args_dup(char **argv, int is_formatted)
 
 int	ft_argv_check(char **argv, int is_formatted)
 {
-	int	i;
+	int			i;
+	long int	num;
 
 	i = is_formatted;
 	while (argv[i])
@@ -71,6 +72,9 @@ int	ft_argv_check(char **argv, int is_formatted)
 		if (ft_strcmp(argv[i], "") == 0)
 			return (0);
 		if (!ft_is_number(argv[i]))
+			return (0);
+		num = ft_atol(argv[i]);
+		if (num > INT_MAX || num < INT_MIN)
 			return (0);
 		i++;
 	}

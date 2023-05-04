@@ -6,13 +6,13 @@
 /*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 18:35:16 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/25 18:40:10 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/03 17:09:05 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sx(char x, t_stack *stack)
+void	ft_sx(t_stack *stack, char x)
 {
 	if (stack == NULL || stack->next == NULL)
 		return ;
@@ -24,10 +24,10 @@ void	ft_sx(char x, t_stack *stack)
 		ft_putstr("sb\n");
 }
 
-void	ft_ss(char should_write, t_stack **stack_a, t_stack **stack_b)
+void	ft_ss(t_stack **stack_a, t_stack **stack_b, char should_write)
 {
-	ft_sx(' ', *stack_a);
-	ft_sx(' ', *stack_b);
+	ft_sx(*stack_a, ' ');
+	ft_sx(*stack_b, ' ');
 	if (should_write != ' ')
 		ft_putstr("ss\n");
 }

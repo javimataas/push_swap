@@ -6,7 +6,7 @@
 /*   By: jmatas-p <jmatas-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 18:24:46 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/04/27 19:08:36 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:24:11 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	ft_sort_three(t_stack **stack)
 
 	max = ft_get_max_idx(*stack);
 	if ((*stack)->index == max)
-		ft_rx('a', stack);
+		ft_rx(stack, 'a');
 	else if ((*stack)->next->index == max)
-		ft_rrx('a', stack);
+		ft_rrx(stack, 'a');
 	if ((*stack)->index > (*stack)->next->index)
-		ft_sx('a', *stack);
+		ft_sx(*stack, 'a');
 }
