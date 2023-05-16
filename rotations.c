@@ -6,7 +6,7 @@
 /*   By: jmatas-p <jmatas-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:45:14 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/05/03 17:09:52 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/11 18:35:16 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_rx(t_stack **stack, char x)
 	t_stack	*aux;
 	t_stack	*last;
 
+	if (!(*stack) || !(*stack)->next)
+		return ;
 	aux = *stack;
 	*stack = (*stack)->next;
 	last = ft_last_value(*stack);
@@ -42,6 +44,8 @@ void	ft_rrx(t_stack **stack, char x)
 	t_stack	*last;
 	t_stack	*before_last;
 
+	if (!(*stack) || !(*stack)->next)
+		return ;
 	last = ft_last_value(*stack);
 	before_last = ft_before_last_value(*stack);
 	before_last->next = NULL;

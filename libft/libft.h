@@ -6,7 +6,7 @@
 /*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:56:20 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/05/03 17:06:57 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/11 17:18:02 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,11 @@ int				ft_num_len(unsigned int n);
 char			*ft_uitoa(unsigned int n);
 
 char			*get_next_line(int fd);
+char			*ft_strchr_gnl(const char *s, int c);
+void			*ft_calloc_gnl(size_t count, size_t size);
+int				ft_strlen_gnl(const char *s);
+char			*ft_strjoin_gnl(char *s1, char *s2);
+
 int				ft_abs(int n);
 long int		ft_atol(const char *str);
 void			ft_free_str_array(char **array);

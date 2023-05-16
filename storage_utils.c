@@ -6,7 +6,7 @@
 /*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 16:39:16 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/05/04 19:41:40 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/11 18:18:55 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,17 +67,4 @@ void	ft_set_idx(t_stack *stack, int size)
 			highest->index = size;
 		size--;
 	}
-}
-
-void	ft_print_values(t_stack *stack)
-{
-	t_stack	*current;
-
-	current = stack;
-	while (current != NULL)
-	{
-		ft_printf(" %d -", current->value);
-		current = current->next;
-	}
-	ft_printf("\n");
 }

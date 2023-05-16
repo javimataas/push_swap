@@ -6,7 +6,7 @@
 /*   By: jmatas-p <jmatas-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:28:53 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/05/03 17:16:50 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/11 18:19:07 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ char			**ft_format(char **argv);
 void			ft_free_stack(t_stack **stack);
 t_stack			*ft_fill_stack(char **argv, int parsed);
 void			ft_set_idx(t_stack *stack, int size);
-void			ft_print_values(t_stack *stack);
 
 void			ft_rx(t_stack **stack, char x);
 void			ft_rr(t_stack **stack_a, t_stack **stack_b, char should_write);

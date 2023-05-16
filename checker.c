@@ -6,15 +6,15 @@
 /*   By: jmatas-p <jmatas-p@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 20:26:17 by jmatas-p          #+#    #+#             */
-/*   Updated: 2023/05/04 20:51:18 by jmatas-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 19:01:41 by jmatas-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_rot_error(t_stack **stack_a, t_stack **stack_b)
+void	ft_exit_error(t_stack **stack_a, t_stack **stack_b)
 {
-	ft_printf("Exception: NaR\n");
+	ft_printf("Error\n");
 	ft_free_stack(stack_a);
 	ft_free_stack(stack_b);
 	exit(1);
@@ -45,17 +45,17 @@ void	ft_do_op(char *op, t_stack **stack_a, t_stack **stack_b)
 	else if (ft_strcmp(op, "rrr\n") == 0)
 		ft_rrr(stack_a, stack_b, ' ');
 	else
-		ft_rot_error(stack_a, stack_b);
+		ft_exit_error(stack_a, stack_b);
 }
 
-int	ft_checker(char **argv, int is_formatted)
+int	ft_checker(char **argv, int is_parsed)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	char	*op;
 
 	stack_b = NULL;
-	stack_a = ft_fill_stack(argv, is_formatted);
+	stack_a = ft_fill_stack(argv, is_parsed);
 	op = get_next_line(0);
 	while (op)
 	{
@@ -74,25 +74,27 @@ int	ft_checker(char **argv, int is_formatted)
 
 int	main(int argc, char **argv)
 {
-	char	**formatted;
-	int		is_formatted;
+	char	**parsed;
+	int		is_parsed;
 
-	is_formatted = 1;
-	formatted = NULL;
+	is_parsed = 1;
+	parsed = NULL;
 	if (argc == 2)
 	{
-		formatted = ft_format(argv);
-		is_formatted = 0;
+		parsed = ft_format(argv);
+		is_parsed = 0;
 	}
 	else
-		formatted = argv;
+		parsed = argv;
 	if (argc < 2)
 		return (0);
-	if (!ft_argv_check(formatted, is_formatted))
+	if (!ft_argv_check(parsed, is_parsed))
 	{
 		ft_printf("Error, nonvalid argument\n");
+		ft_free_str_array(parsed);
 		return (0);
 	}
-	ft_checker(formatted, is_formatted);
+	ft_checker(parsed, is_parsed);
+	ft_free_str_array(parsed);
 	return (0);
 }
